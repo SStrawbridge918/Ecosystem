@@ -1,14 +1,14 @@
 public class World {
-   public PVector size; 
+   public PVector pos,size; 
 
 
 public World() {
- size = new PVector(width,height);
- 
+ size = new PVector(800,800);
+ pos = new PVector(0,0);
 }
 
 public void show() {
  fill(40,240,40);
- square(size.x,size.y,width*height/2);
+ square(size.x,size.y,width/2*height/2);
 }
 }
