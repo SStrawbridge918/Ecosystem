@@ -4,6 +4,7 @@ public class Creature {
   public float hp = 100.0;
   public final int SIZE = 25;
   public final color COLOR = color(139,69,19);
+  public boolean active = true;
   
   public Creature(int x, int y) {
     pos = new PVector(x,y);

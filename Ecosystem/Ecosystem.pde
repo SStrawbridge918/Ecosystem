@@ -16,10 +16,13 @@ public void draw () {
   creatures[i].show();
   creatures[i].move();
   }
-  for(int j = 0; j < food.length;j++) {
-   food[j].show(); 
-   for(int i = 0; i < creatures.length;i++) {
-   creatures[i].collides(food[j]);
+  for(int j = 0; j < food.length;j++) { //<>//
+   if(food[j].active == true)
+   food[j].show();
+     creatures[j].collides(food[j]);
+     //<>// //<>// //<>//
+   for(int i = 0; i < creatures.length;i++) { //<>//
+   
    }
   }
 }
