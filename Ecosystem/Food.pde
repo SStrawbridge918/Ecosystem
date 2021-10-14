@@ -16,7 +16,7 @@ public class Food {
   
   public void collides(Creature c) {
    if (this.pos.x == c.pos.x + c.SIZE/2 && this.pos.y == c.pos.y + c.SIZE/2){
-   c.hp++;
+   
    active = false;}
    if (c.hp <= 0){
     c.active = false;

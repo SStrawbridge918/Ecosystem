@@ -23,10 +23,11 @@ public class Creature {
   
   public void collides(Food f) {
     double dist = PVector.sub(this.pos,f.pos).mag(); //<>//
-    if (dist <= this.SIZE / 2 + f.SIZE / 2) {
+    if (dist <= this.SIZE / 2 + f.SIZE / 2 && f.active == true) {
       hp++;
-     // f.active = false;
+      f.active = false;
       System.out.println("Hp: "+hp);
+      
     }
   }
   

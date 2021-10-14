@@ -15,15 +15,15 @@ public void draw () {
   for(int i = 0; i < creatures.length; i++) {
   creatures[i].show();
   creatures[i].move();
+  for(int k = 0; k < food.length; k++) {
+    creatures[i].collides(food[k]);
   }
-  for(int j = 0; j < food.length;j++) { //<>//
-   if(food[j].active == true)
-   food[j].show();
-     creatures[j].collides(food[j]);
-     //<>// //<>// //<>//
-   for(int i = 0; i < creatures.length;i++) { //<>//
-   
+  }
+  for(int j = 0; j < food.length;j++) {
+   if(food[j].active == true){
+   food[j].show(); //<>//
    }
+   
   }
 }
 
