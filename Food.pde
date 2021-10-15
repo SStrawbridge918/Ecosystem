@@ -13,4 +13,15 @@ public class Food {
     fill(COLOR);
     circle(pos.x,pos.y,SIZE);
   }
+  
+  public void collides(Creature c) {
+   if (this.pos.x == c.pos.x + c.SIZE/2 && this.pos.y == c.pos.y + c.SIZE/2){
+   
+   active = false;}
+   if (c.hp <= 0){
+    c.active = false;
+    
+   }
+   
+  }
 }
